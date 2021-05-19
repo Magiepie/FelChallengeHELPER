@@ -22,6 +22,7 @@ function ToolTip(i)
     local ChalName= mytext1:GetText()
     local mytext2=_G["GameTooltipTextLeft2"] 
     local Tier=mytext2:GetText()
+	if Tier == nil then return end
 	local Tier = Tier:match("Tier (%d*)")
 
     if Tier and ChalName and IsChallenge(Tier,ChalName) then -- Fix lua errors By Szyler
